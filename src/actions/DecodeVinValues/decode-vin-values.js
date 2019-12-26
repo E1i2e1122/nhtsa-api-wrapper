@@ -1,3 +1,9 @@
+const axios = require('axios')
+
+// utility helper functions
+const { genApiUrl } = require('../../api/utils')
+const { isValidType } = require('../../util/isValidType')
+
 /**
  * @category Actions
  * @module actions/DecodeVinValues
@@ -11,17 +17,6 @@
  * @requires {@link isValidType}
  *
  * @requires {@link module:node_modules/axios}
- */
-
-const axios = require('axios')
-
-// utility helper functions
-const { genApiUrl } = require('../../api/utils')
-const { isValidType } = require('../../util/isValidType')
-
-/**
- * @function DecodeVinValues
- * @async
  *
  * @description DecodeVinValues - NHTSA.dot.gov/vehicles API Action<br>
  *  > **INFO:**<br>
@@ -54,6 +49,11 @@ const { isValidType } = require('../../util/isValidType')
  *    "Results": [
  *      // Results is a Single Object containing key:value<String> pairs
  *      {
+ *        // URL that was used in axios.get()
+ *        url: String,
+ *        // Action this result came from
+ *        action: String,
+ *
  *        // ...etc,
  *        ManufacturerId: '1147',
  *        Model: 'R32',
@@ -65,11 +65,7 @@ const { isValidType } = require('../../util/isValidType')
  *        WheelBaseShort: '',
  *        // ...etc
  *      }
- *    ],
- *    // URL that was used in axios.get()
- *    url: String,
- *    // Action this result came from
- *    action: String,
+ *    ]
  *  })
  *  ```
  * -----
