@@ -62,7 +62,7 @@
             <div class="column is-3" id="sidebarNav">
                 <div class="sidebar">
                     <nav>
-                        <h2><a href="index.html">Home</a></h2><div class="category"><h3>Tutorials</h3><ul><li><a href="tutorial-placeholder.html">placeholder</a></li></ul><h3>Global</h3><ul><li><a href="global.html#isValidType">isValidType</a></li><li><a href="global.html#queryString">queryString</a></li></ul></div>
+                        <h2><a href="index.html">Home</a></h2><div class="category"><h3>Tutorials</h3><ul><li><a href="tutorial-placeholder.html">placeholder</a></li></ul><h3>Global</h3><ul><li><a href="global.html#greet">greet</a></li><li><a href="global.html#isValidType">isValidType</a></li></ul></div><div class="category"><h2>utils</h2><h3>Modules</h3><ul><li><a href="module-utils_makeQueryString.html">utils/makeQueryString</a></li></ul><h3>Interfaces</h3><ul><li><a href="utils_makeQueryString.QueryStringParameters.html">QueryStringParameters</a></li></ul></div>
                     </nav>
                 </div>
             </div>
@@ -220,7 +220,7 @@ Note: Uses <code>Object.prototype.toString.call(value)</code> under the hood</p>
         <p class="tag-source">
             <a href="isValidType.ts.html" class="button">View Source</a>
             <span>
-                <a href="isValidType.ts.html">isValidType.ts</a>, <a href="isValidType.ts.html#line1">line 1</a>
+                <a href="isValidType.ts.html">isValidType.ts</a>, <a href="isValidType.ts.html#line2">line 2</a>
             </span>
         </p>
     
@@ -245,16 +245,12 @@ Note: Uses <code>Object.prototype.toString.call(value)</code> under the hood</p>
 
 
     
-    <h4 class="name" id="queryString">
-        <a class="href-link" href="#queryString">#</a>
-        
-            
-                <span class='tag'>async</span>
-            
+    <h4 class="name" id="greet">
+        <a class="href-link" href="#greet">#</a>
         
         <span class="code-name">
             
-                queryString<span class="signature">(params)</span><span class="type-signature"> &rarr; {Promise.&lt;string>|Error}</span>
+                greet<span class="signature">(name, age)</span><span class="type-signature"> &rarr; {string}</span>
             
         </span>
     </h4>
@@ -263,8 +259,7 @@ Note: Uses <code>Object.prototype.toString.call(value)</code> under the hood</p>
     
     
     <div class="description">
-        <p>Utility method to generate a query string,<br>
-for use with an NHTSA.gov API URL string. <br><br></p>
+        <p>Returns a greeting</p>
     </div>
     
 
@@ -302,13 +297,13 @@ for use with an NHTSA.gov API URL string. <br><br></p>
         
 <tr class="deep-level-0">
   
-      <td class="name"><code>params</code></td>
+      <td class="name"><code>name</code></td>
   
 
   <td class="type">
   
       
-<span class="param-type">object</span>
+<span class="param-type">string</span>
 
 
   
@@ -318,9 +313,32 @@ for use with an NHTSA.gov API URL string. <br><br></p>
 
   
 
-  <td class="description last"><p><a name="params"></a> <code>REQUIRED</code><br></p>
-<h4 id="an-object-containing-key%3Avalue-api-query-parameters-to-use.">An object containing key:value API query parameters to use.<br></h4>
-<p>All params will be converted into strings with</p></td>
+  <td class="description last"><p>What is your name?</p></td>
+</tr>
+
+
+    
+
+        
+<tr class="deep-level-0">
+  
+      <td class="name"><code>age</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">number</span>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>How many years old are you?</p></td>
 </tr>
 
 
@@ -365,9 +383,9 @@ for use with an NHTSA.gov API URL string. <br><br></p>
 
     
         <p class="tag-source">
-            <a href="utils_queryString.ts.html" class="button">View Source</a>
+            <a href="index.ts.html" class="button">View Source</a>
             <span>
-                <a href="utils_queryString.ts.html">utils/queryString.ts</a>, <a href="utils_queryString.ts.html#line9">line 9</a>
+                <a href="index.ts.html">index.ts</a>, <a href="index.ts.html#line4">line 4</a>
             </span>
         </p>
     
@@ -398,20 +416,13 @@ for use with an NHTSA.gov API URL string. <br><br></p>
 
 <div class="columns">
     
-    <div class='param-desc column is-7'><p>An API query string <br></p>
-<ul>
-<li>On resolve: <code>Promise(&lt;string&gt;)</code><br></li>
-<li>On reject: <code>new Error(error&lt;string&gt;)</code></li>
-</ul></div>
+    <div class='param-desc column is-7'><p><code>Hello ${name}, you are ${age} years old!</code></p></div>
     
     
     <div class='column is-5 has-text-left'>
         <label>Type: </label>
         
-<span class="param-type">Promise.&lt;string></span>
-|
-
-<span class="param-type">Error</span>
+<span class="param-type">string</span>
 
 
     </div>
@@ -423,27 +434,6 @@ for use with an NHTSA.gov API URL string. <br><br></p>
     </div>
 
 
-
-
-    <h5>Examples</h5>
-    
-        <p class="code-caption">Single Param:</p>
-    
-    
-        <pre class="prettyprint"><code>const qs = await genQueryString({  format: 'json'}).catch(error => error)// => Promise.resolve("?format=json")</code></pre>
-    
-
-        <p class="code-caption">Multiple Params:</p>
-    
-    
-        <pre class="prettyprint"><code>const qs = await genQueryString({  format: 'json',  modelYear: 2006,  page: "2"}).catch(error => error)// => Promise.resolve("?format=json&amp;modelYear=2006&amp;page=2")</code></pre>
-    
-
-        <p class="code-caption">Empty Params Object:</p>
-    
-    
-        <pre class="prettyprint"><code>const qs = await genQueryString({}).catch(error => error)// => Promise.resolve("")</code></pre>
-    
 
 
 </div>
@@ -470,7 +460,7 @@ for use with an NHTSA.gov API URL string. <br><br></p>
 
 <footer class="footer">
     <div class="content has-text-centered">
-        <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Tue Jan 14 2020 20:57:02 GMT-0600 (Central Standard Time)</p>
+        <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Wed Jan 15 2020 00:02:34 GMT-0600 (Central Standard Time)</p>
         <p class="sidebar-created-by">
             <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by 
             <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
