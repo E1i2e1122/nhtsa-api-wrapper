@@ -1,0 +1,194 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>JSDoc: api/actions/GetCanadianVehicleSpecifications.ts</title>
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="./build/entry.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="https://fonts.googleapis.com/css?family=Muli:100,400,700|Oswald:300|Inconsolata,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+</head>
+
+<body>
+    <div id="stickyNavbarOverlay"></div>
+    <div class="top-navbar">
+        <div class="container">
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    
+                     
+                        <h1 class="navbar-item">@shaggytools/nhtsa-api-wrapper</h1>
+                    
+                    <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+                 
+                <div class="navbar-menu">
+                    <div class="navbar-end">
+                    
+                        <div class="navbar-item">
+                            <a href="https://www.shaggytech.com/nhtsa-api-wrapper" target="_blank">
+                                Github
+                            </a>
+                        </div>
+                    
+                        <div class="navbar-item">
+                            <a href="https://www.github.com/shaggytech" target="_blank">
+                                @shaggytech
+                            </a>
+                        </div>
+                    
+                    </div>
+                </div>
+                
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+        <div class="columns">
+            <div class="column is-3" id="sidebarNav">
+                <div class="sidebar">
+                    <nav>
+                        <h2><a href="index.html">Home</a></h2><div class="category"><h3>Tutorials</h3><ul><li><a href="tutorial-placeholder.html">placeholder</a></li></ul><h3>Modules</h3><ul><li><a href="module-api_Fetch.html">api/Fetch</a></li><li><a href="module-api_types.html">api/types</a></li></ul><h3>Classes</h3><ul><li><a href="module-api_Fetch.Fetch.html">Fetch</a></li><li><a href="NHTSA.html">NHTSA</a></li></ul></div><div class="category"><h2>Actions</h2><h3>Classes</h3><ul><li><a href="DecodeVin.html">DecodeVin</a></li><li><a href="DecodeVinExtended.html">DecodeVinExtended</a></li><li><a href="DecodeVinValues.html">DecodeVinValues</a></li><li><a href="DecodeVinValuesExtended.html">DecodeVinValuesExtended</a></li><li><a href="DecodeWMI.html">DecodeWMI</a></li><li><a href="GetAllMakes.html">GetAllMakes</a></li><li><a href="GetAllManufacturers.html">GetAllManufacturers</a></li><li><a href="GetCanadianVehicleSpecifications.html">GetCanadianVehicleSpecifications</a></li><li><a href="GetEquipmentPlantCodes.html">GetEquipmentPlantCodes</a></li><li><a href="GetMakeForManufacturer.html">GetMakeForManufacturer</a></li><li><a href="GetMakesForManufacturerAndYear.html">GetMakesForManufacturerAndYear</a></li><li><a href="GetMakesForVehicleType.html">GetMakesForVehicleType</a></li><li><a href="GetManufacturerDetails.html">GetManufacturerDetails</a></li><li><a href="GetModelsForMake.html">GetModelsForMake</a></li><li><a href="GetModelsForMakeId.html">GetModelsForMakeId</a></li><li><a href="GetModelsForMakeIdYear.html">GetModelsForMakeIdYear</a></li><li><a href="GetModelsForMakeYear.html">GetModelsForMakeYear</a></li><li><a href="GetParts.html">GetParts</a></li><li><a href="GetVehicleTypesForMake.html">GetVehicleTypesForMake</a></li><li><a href="GetVehicleTypesForMakeId.html">GetVehicleTypesForMakeId</a></li><li><a href="GetVehicleVariableList.html">GetVehicleVariableList</a></li><li><a href="GetVehicleVariableValuesList.html">GetVehicleVariableValuesList</a></li><li><a href="GetWMIsForManufacturer.html">GetWMIsForManufacturer</a></li></ul></div><div class="category"><h2>Utils</h2><h3>Modules</h3><ul><li><a href="module-isValidType.html">isValidType</a></li><li><a href="module-isValidVin.html">isValidVin</a></li><li><a href="module-utils_getTypeof.html">utils/getTypeof</a></li><li><a href="module-utils_makeQueryString.html">utils/makeQueryString</a></li></ul><h3>Interfaces</h3><ul><li><a href="module-isValidType.IsValidTypeOptions.html">IsValidTypeOptions</a></li></ul></div>
+                    </nav>
+                </div>
+            </div>
+            <div class="column is-9-desktop">
+                <div class="content" id="main-content-wrapper">
+                    <header class="page-title">
+                        <p>Source</p>
+                        <h1>api/actions/GetCanadianVehicleSpecifications.ts</h1>
+                    </header>
+                    
+                    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/* Parent Class */
+import { Fetch } from '../Fetch';
+
+/**
+ * @category Actions
+ * @class GetCanadianVehicleSpecifications
+ * @extends {module:api/Fetch.Fetch}
+ */
+export class GetCanadianVehicleSpecifications extends Fetch {
+  /**
+   * This returns the Models in the vPIC dataset for a specified Model Year and Make whose name is LIKE the Make in vPIC Dataset.
+   * - `params.year` is the only query parameter the user must provide.
+   * - `params.makeId` is a number
+   * - `params.modelYear` is a number (greater than 1995)
+   * - `params.vehicleType` can be a partial name, or a full name for more specificity
+   *   (e.g., "Vehicle", "Moto", "Low Speed Vehicle", etc.)
+   * This API action will return a 404 html error if any of the query parameters in params
+   *   are missing from the query string. This is the only API action with this behaviour. Therefore,
+   *   parameters are inserted into the query string as empty strings, if not provided by the user.
+   *
+   * @async
+   * @memberof GetCanadianVehicleSpecifications
+   *
+   * @param {object} params Query Search Parameters to append to the URL
+   * @param {number} params.year Model year of the vehicle (required) - Number, >= 1971
+   * @param {string} [params.make] Vehicle's make, like "Honda", "Toyota", etc...
+   * @param {string} [params.model] Vehicle's model, like "Pilot", "Focus". Can also include some other elements like Body Type, Engine Model/size, etc...
+   * @param {string} [params.units] "Metric" (default), or "US" for United States customary units
+   *
+   * @returns {(Promise&lt;module:api.ApiResponse | Error>)}
+   */
+  async GetCanadianVehicleSpecifications(
+    params: {
+      year: number;
+      make?: string;
+      model?: string;
+      units?: string;
+    } = {
+      year: undefined as any
+    }
+  ): Promise&lt;import('../types').ApiResponse | Error> {
+    const action = 'GetCanadianVehicleSpecifications';
+
+    /* Runtime gatekeeping */
+    if (!params.year) {
+      return Promise.reject(
+        new Error(`${action}, params.year is required, got: ${params.year}`)
+      );
+    }
+
+    /* Set default query parameters to empty strings if not provided by the user */
+    if (!params.make) params.make = '';
+    if (!params.model) params.model = '';
+    if (!params.units) params.units = '';
+
+    /*
+     * Build the 'default' query string to be appended to the URL
+     * Additionally, set the allowEmptyStringValues option (2nd argument) to true
+     * This API action will return a 404 error if any of the query parameters in params
+     * are missing from the query string. This is the only API action with this behaviour.
+     * "year" is the only param the user must provide.
+     */
+    const queryString = await this.buildQueryString(
+      params,
+      true
+    ).catch((err: Error) =>
+      Promise.reject(
+        new Error(`${action}, Error building query string: ${err}`)
+      )
+    );
+
+    /* Build the final request URL*/
+    const url = `${this.baseUrl}/${action}${queryString}`;
+
+    /* Return the result */
+    return await this.get(url)
+      .then(response => response)
+      .catch((err: Error) =>
+        Promise.reject(new Error(`${action}, Fetch.get() error: ${err}`))
+      );
+  }
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Thu Feb 13 2020 18:00:50 GMT-0600 (Central Standard Time)</p>
+        <p class="sidebar-created-by">
+            <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by 
+            <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+        </p>
+    </div>
+</footer>
+
+
+<script src="scripts/app.min.js"></script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
