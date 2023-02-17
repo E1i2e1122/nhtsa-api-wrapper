@@ -85,7 +85,7 @@ interface NhtsaApiResponse<DecodeVinValuesResults> = {
 }
 ```
 
-::: details :mag: Click to View Full Example Response
+::: details :mag: Click to Show Full Example Response
 <<< @/snippets/endpoints/decode-vin-values.ts#example-response
 :::
 
@@ -111,7 +111,7 @@ Object returned in the `Results` array of `DecodeVinValues` endpoint response.
 In the return object, `Results` will be an array with a _single_ object of type
 `DecodeVinValuesResults`.
 
-::: details :mag: Click to View Type Definition
+::: details :mag: Click to Show Type Definition
 <<< @/snippets/endpoints/decode-vin-values.ts#type-results
 :::
 
