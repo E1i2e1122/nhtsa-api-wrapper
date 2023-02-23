@@ -7,7 +7,7 @@
 ```typescript
 async function GetModelsForMakeId(
   makeId: string | number,
-  doFetch = true
+  doFetch?: boolean
 ): Promise<NhtsaResponse<GetModelsForMakeIdResults> | string>
 ```
 
